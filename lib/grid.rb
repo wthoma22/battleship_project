@@ -16,10 +16,11 @@ class Grid
   end
 
   def update_grid(location,result)
+    binding.pry
     @empty_spaces[location[0].to_i][location[1].to_i] = result
     display
   end
-  
+
   def display
     puts "==========="
     puts ". A B C D"
