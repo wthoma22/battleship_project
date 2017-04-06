@@ -78,4 +78,25 @@ module Messages
   def miss_message
     p "It's a miss.."
   end
+
+  def submarine_hit_message
+    p "The computer has hit your submarine!"
+  end
+
+  def destroyer_hit_message
+    p "The computer has hit your destroyer!"
+  end
+
+  def computer_missed_message
+    p "The computer has missed you!"
+  end
+
+  def coordinates_message
+    p "Enter three coordinates for your second ship."
+  end
+
+  def fire_at_enemy_message
+    p "Guess a coordinate to fire at the enemy!"
+  end
+
 end

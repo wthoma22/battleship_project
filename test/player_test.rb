@@ -11,21 +11,14 @@ require './lib/messages'
 class PlayerTest < Minitest::Test
 
    def test_it_exists
-     skip
      player = Player.new
      assert_equal Player, player.class
    end
+   
    def test_user_can_place_ship
-     skip
      player = Player.new
      submarine = Ship.new(2, 0)
      player.user_place_first_ship
-   end
-
-   def test_user_place_first_ship
-     skip
-     player = Player.new
-     assert_equal "something", player.user_place_first_ship
    end
 
    def test_show_user_start_messages
@@ -41,7 +34,7 @@ class PlayerTest < Minitest::Test
 
    def test_validate_user_input_2
      player = Player.new
-     assert_equal true, player.validate_user_input_2("B2")
+     assert_equal false, player.validate_user_input_2("B2")
    end
 
    def test_empty_string
@@ -50,12 +43,6 @@ class PlayerTest < Minitest::Test
      assert_equal [0, 1], player.empty_string("B1")
      assert_equal [2, 0], player.empty_string("A3")
      assert_equal [1, 3], player.empty_string("D2")
-   end
-
-   def test_player_can_place_ship
-     skip
-     player = Player.new
-     assert_equal "A1", player.user_place_first_ship
    end
 
 end

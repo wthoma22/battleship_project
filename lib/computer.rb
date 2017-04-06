@@ -66,13 +66,13 @@ class Computer
     numbers = [0,1,2,3]
     guess = numbers.sample(2)
     if player_submarine.location.include? guess
-      p "The computer has hit your submarine!"
+      submarine_hit_message
       player_submarine.instance_variable_set(:@health, player_submarine.health - 1)
     elsif player_destroyer.location.include? guess
-      p "The computer has hit your destroyer!"
+      destroyer_hit_message
       player_destroyer.instance_variable_set(:@health, player_destroyer.health - 1)
     else
-      p "The computer has missed you!"
+      computer_missed_message
     end
   end
 end

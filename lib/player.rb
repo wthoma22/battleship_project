@@ -46,7 +46,7 @@ class Player
   end
 
   def user_place_second_ship
-    p "Enter three coordinates for your second ship."
+    coordinates_message
     user_input2=gets.upcase.split(" ")
     if validate_user_input_2(user_input2)
       ship_cell_location = empty_cell_input(user_input2)
@@ -87,7 +87,7 @@ class Player
   end
 
   def user_guess(computer_submarine, computer_destroyer)
-    p "Guess a coordinate to fire at the enemy!"
+    fire_at_enemy_message
     user_guess = gets.upcase.chomp
     translated_guess = empty_string(user_guess)
     if computer_submarine.location.include? translated_guess
@@ -101,7 +101,6 @@ class Player
 
     else
       miss_message
-      binding.pry
       @grid.update_grid(translated_guess,"M")
     end
   end
