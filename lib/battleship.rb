@@ -12,6 +12,7 @@ class BattleShip
   end
 
   def menu
+    battleship_title
     game_introduction
     response
     play_battleship
